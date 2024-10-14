@@ -9,13 +9,12 @@
         body {
             margin: 0;
             font-family: 'Assistant', sans-serif;
-            background-color: #fafafa;
-            color: #333;
+            background-color: #f0f0f0;
             direction: rtl;
         }
 
         header {
-            background-color: #2196F3;
+            background-color: #4CAF50;
             color: white;
             padding: 20px;
             text-align: center;
@@ -25,52 +24,49 @@
             z-index: 100;
         }
 
-        section {
-            max-width: 800px;
-            margin: 40px auto;
-            padding: 20px;
-            background-color: white;
-            border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        nav {
+            background-color: #333;
+            color: white;
+            display: flex;
+            justify-content: center;
+            padding: 10px;
         }
 
-        section:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 0 15px;
+            font-size: 1.2rem;
         }
 
-        h2 {
-            color: #2196F3;
-            text-align: center;
+        nav a:hover {
+            text-decoration: underline;
         }
 
-        p {
-            line-height: 1.6;
-            margin-top: 20px;
+        .content {
+            padding: 30px;
+            text-align: right;
         }
 
         footer {
             text-align: center;
             padding: 20px;
-            background-color: #2196F3;
+            background-color: #4CAF50;
             color: white;
             position: relative;
             bottom: 0;
             width: 100%;
         }
 
-        .back-link {
-            display: block;
-            text-align: center;
-            margin-top: 20px;
-            font-size: 1.2rem;
-            text-decoration: none;
-            color: #007BFF;
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 1s forwards;
         }
 
-        .back-link:hover {
-            text-decoration: underline;
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
         }
     </style>
 </head>
@@ -78,14 +74,26 @@
     <header>
         פיתוח אתרים
     </header>
-    
-    <section>
-        <h2>מבוא לפיתוח אתרים</h2>
-        <p>פיתוח אתרים מתייחס לתהליך יצירת ותחזוקת אתרים. הוא כולל עיצוב אתרים, תכנות, וניהול בסיסי נתונים.</p>
-        <p>פיתוח אתרים מודרני כולל שימוש ב-HTML5, CSS3 ו-JavaScript לבניית אתרים רספונסיביים ואינטראקטיביים.</p>
 
-        <a href="index.html" class="back-link">חזרה לדף הבית</a>
-    </section>
+    <nav>
+        <a href="index.html">בית</a>
+        <a href="about.html">אודות</a>
+        <a href="web-development.html">פיתוח אתרים</a>
+        <a href="programming-languages.html">שפות תכנות</a>
+        <a href="databases.html">בסיסי נתונים</a>
+        <a href="ai-machine-learning.html">בינה מלאכותית ולמידת מכונה</a>
+    </nav>
+
+    <div class="content fade-in">
+        <h2>לימוד HTML, CSS, ו-JavaScript</h2>
+        <p>פיתוח אתרים מודרני כולל שימוש ב-HTML ליצירת מבנה דפי אינטרנט, CSS לעיצוב, ו-JavaScript לאינטראקטיביות. נלמד את היסודות ונעמיק בטכניקות מתקדמות.</p>
+        <h3>HTML - מבנה התוכן</h3>
+        <p>הבנת השימוש ב-HTML ליצירת תגיות ותכנים היא הבסיס לפיתוח אתרים.</p>
+        <h3>CSS - עיצוב מתקדם</h3>
+        <p>למדו איך לעצב אתרים בצורה מרהיבה תוך שימוש בטכניקות CSS מתקדמות.</p>
+        <h3>JavaScript - אינטראקטיביות</h3>
+        <p>גלה כיצד להוסיף דינמיות לאתרים באמצעות JavaScript, כולל שימוש ב-React ו-Vue.js.</p>
+    </div>
 
     <footer>
         &copy; 2024 אתר ללימוד טכנולוגיה
