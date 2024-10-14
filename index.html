@@ -24,23 +24,27 @@
             z-index: 100;
         }
 
-        nav {
-            background-color: #333;
-            color: white;
+        .navbar {
+            background-color: #f5f5f5;
+            border-radius: 25px;
+            margin: 20px auto;
+            padding: 10px;
+            width: 80%;
             display: flex;
             justify-content: center;
-            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        nav a {
-            color: white;
+        .navbar a {
             text-decoration: none;
-            padding: 0 15px;
+            color: #333;
+            margin: 0 15px;
+            font-weight: bold;
             font-size: 1.2rem;
         }
 
-        nav a:hover {
-            text-decoration: underline;
+        .navbar a:hover {
+            color: #4CAF50;
         }
 
         .container {
@@ -60,6 +64,7 @@
             text-align: center;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
+            background-color: #ffeb3b;
         }
 
         .card:hover {
@@ -93,18 +98,6 @@
             bottom: 0;
             width: 100%;
         }
-
-        /* אפקטים ואנימציות */
-        .fade-in {
-            opacity: 0;
-            animation: fadeIn 1s forwards;
-        }
-
-        @keyframes fadeIn {
-            to {
-                opacity: 1;
-            }
-        }
     </style>
 </head>
 <body>
@@ -112,17 +105,13 @@
         ברוכים הבאים לאתר ללימוד טכנולוגיה
     </header>
 
-    <!-- שורת ניווט -->
-    <nav>
-        <a href="index.html">בית</a>
-        <a href="about.html">אודות</a>
-        <a href="web-development.html">פיתוח אתרים</a>
-        <a href="programming-languages.html">שפות תכנות</a>
-        <a href="databases.html">בסיסי נתונים</a>
-        <a href="ai-machine-learning.html">בינה מלאכותית ולמידת מכונה</a>
-    </nav>
-
-    <div class="container fade-in">
+    <!-- שורת ניווט מהיר -->
+    <div class="navbar">
+        <a href="index.html">🏠 בית</a>
+        <a href="about.html">ℹ️ אודות</a>
+    </div>
+    
+    <div class="container">
         <div class="card" onclick="location.href='web-development.html'">
             <a href="web-development.html">פיתוח אתרים</a>
             <p>למדו איך לבנות אתרים מודרניים עם HTML, CSS ו-JavaScript.</p>
